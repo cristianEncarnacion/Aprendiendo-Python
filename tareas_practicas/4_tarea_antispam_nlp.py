@@ -36,3 +36,6 @@ print("¡Entrenamiento completado!")
 nuevo_mensaje = tf.constant(["hola ganaste un premio urgente haz clic"])
 resultado = modelo.predict(nuevo_mensaje)
 print("Probabilidad de que el mensaje sea SPAM: ", resultado[0][0])
+# Congelamos el modelo y lo guardamos en un archivo físico
+modelo.save("mi_detector_spam.keras")
+print("¡Modelo guardado exitosamente en el disco duro!")
